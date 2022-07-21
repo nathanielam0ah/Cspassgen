@@ -1,4 +1,4 @@
-/[Bb]bin
-/[Oo]obj
+/bin
+/obj
 /.vscode
 Cspassgen.csproj
