@@ -13,20 +13,20 @@ public static class GeneratePassword{
   private static string qDigits="1234567890";
   private static string qChars="!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
-  public static void Generate(int Length=8){
-    Console.WriteLine($"Input the desired length:\t");
-    try{
-      Length=Convert.ToInt32(Console.ReadLine());
-    }catch{
-      Length=8;
-    }
+  public static void Generate(bool restart=true, int qLength=8){
+    while(restart==true){
+      Console.WriteLine($"Input the desired length: (Current:{qLength})\t");
+    try{qLength=Convert.ToInt32(Console.ReadLine());}catch{}
     string qString=$"{qLetters}{qLetters.ToLower()}{qDigits}{qChars}";
-    char[] pwd=new char[Length];
+    char[] pwd=new char[qLength];
     Random rand=new Random();
-    for(int xd=0; xd<Length; xd++){
+    for(int xd=0; xd<qLength; xd++){
       pwd[xd]=qString[rand.Next(qString.Length-1)];
     }
-    Console.WriteLine(":\t"+string.Join(null, pwd));
-    Console.ReadKey();
+    Console.WriteLine(":\t"+string.Join(null, pwd)+"\n: Restart?: [Y]es\t[N]o");
+    if(Console.ReadLine()=="n"){
+      restart=false;
+    }
+    }
   }
 }
