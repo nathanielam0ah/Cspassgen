@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/zu5i387n9WSXoCoCknRh3Lwi9tzC5FZIHKcsnwVp/Q45jhFFpwHnIBTrvzNKqcZ2Ch0G4ZzoxekisVOctKJXg==",
+  "success": true,
+  "projectFilePath": "/home/ignite/source/Cspassgen/Cspassgen.csproj",
+  "expectedPackageFiles": [
+    "/home/ignite/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.6/microsoft.aspnetcore.app.ref.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
