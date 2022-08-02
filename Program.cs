@@ -30,10 +30,7 @@ namespace Cspassgen
                     pwd[xd] = qString[rand.Next(qString.Length - 1)];
                 }
                 Console.WriteLine(":\t" + string.Join(null, pwd) + "\n: Restart?: [Y]es\t[N]o");
-                if (Console.ReadLine() == "n")
-                {
-                    restart = false;
-                }
+                restart=(Console.ReadLine()=="n")? false: true;
             }
         }
     }
